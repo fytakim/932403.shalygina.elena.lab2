@@ -55,6 +55,15 @@ section, aside, form {
 
 .photo img {
   display: block;
+  transition: transform 0.2s;
+}
+
+.photo:hover img {
+  transform: scale(1.15);
+}
+
+.photo:active img {
+  filter: grayscale(1);
 }
 
 .photo-label {
@@ -64,6 +73,14 @@ section, aside, form {
   padding: 2px 6px;
   background-color: var(--color-text);
   color: white;
+}
+
+aside a:visited {
+  color: #493b75;
+}
+
+aside a:hover {
+  color: var(--color-text);
 }
 
 form {
@@ -85,11 +102,23 @@ input, textarea {
   border: 1px solid #728399;
 }
 
+input:focus, textarea:focus, button:focus {
+  outline: 2px solid var(--color-blue);
+}
+
 button {
   background-color: var(--color-blue);
   color: white;
   border: 0;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #103e69;
+}
+
+button:active {
+  background-color: var(--color-text);
 }
 
 footer {
